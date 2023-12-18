@@ -5,4 +5,12 @@ function recur(n) {
     const res = recur(n - 1)
     return n + res
  }
- console.log('🚀 ~ file: index.js:2 ~ recur ~ recur:', recur(100))
+console.log('🚀 ~ file: index.js:2 ~ recur ~ recur:', recur(100))
+ 
+// 尾递归
+function tailRecur  (n, res){
+    // 终止条件
+    if ( n === 0 ) return res
+    return tailRecur( n - 1, res + n )
+}
+console.log('🚀 ~ file: index.js:16 ~ tailRecur:', tailRecur(100,0))
